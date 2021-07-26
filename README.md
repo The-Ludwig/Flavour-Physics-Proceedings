@@ -1,14 +1,9 @@
-LaTeX-template
+Proceedings for the lecture 'Flavour Physics in Theory and Experiment'
 ===
-[Latest PDF Version](https://github.com/The-Ludwig/latex-template/releases/latest/download/latex-template.pdf)
-[![Build LaTeX](https://github.com/The-Ludwig/latex-template/actions/workflows/build.yml/badge.svg)](https://github.com/The-Ludwig/latex-template/actions/workflows/build.yml)
+[Latest PDF Version](https://github.com/The-Ludwig/Flavour-Physics-Proceedings/releases/latest/download/Flavour-Physics-Proceedings.pdf)
+[![Build LaTeX](https://github.com/The-Ludwig/Flavour-Physics-Proceedings/actions/workflows/build.yml/badge.svg)](https://github.com/The-Ludwig/Flavour-Physics-Proceedings/actions/workflows/build.yml)
 
-Template for a reproducable LaTeX workflow using texlive, latexmk, make and automated builds.
-
-**Remember to replace the paths in this README.md file, so you use your own batches**
-
-This can be either used for normal documents or for beamer slides.
-Please look into the comments of `main.tex` to see how to setup beamer. 
+For this lecture we need to write proceedings to be able to write the examn. I chose to write proceedings for [this talk about lepton flavour universality](https://indico.cern.ch/event/976688/).
 
 # Building
 To produce the output to `build/main.pdf` simply run
