@@ -33,29 +33,6 @@
     range-units = single
 }
 
-% Positioning
-\usepackage{float}
-% Floats inside of section 
-\usepackage[section, below]{placeins}
-% same for Subsections 
-\makeatletter
-\AtBeginDocument{%
-  \expandafter\renewcommand\expandafter\subsection\expandafter{%
-    \expandafter\@fb@secFB\subsection
-  }%
-}
-\makeatother
-\floatplacement{figure}{htbp}
-\floatplacement{table}{htbp}
-
-% making caption look nice
-\usepackage[
-  labelfont=bf,        
-  font=small,          
-  width=0.9\textwidth, 
-]{caption}
-\usepackage{subcaption}
-
 % pictures
 \usepackage{graphicx}
 

@@ -1,66 +1,133 @@
-\section{Lepton Flavour Universality}
-In the Standard Model (SM) the three leptons 
-$e, \mu, \tau$ only differ in their mass. 
+\section{Introduction}
+The standard model of particle physics
+(SM) is one of the most precise theories to this date.
+Although the SM describes the interaction of the fundamental particles
+with enormous precision, it is known to have its limitations.
+For example it can not explain the matter-antimatter asymmetry in the universe,
+nor does it include a description of interactions at the Planck-scale.
+Extensions of the SM including new interactions and particles are called
+\enquote{new physics} (NP).
+In the SM the three leptons
+$e, \mu, \tau$ only differ by their mass.
 In all other properties they are interchangeable,
 because they transform the same under the $\symup{SU(3)\times SU(2)\times U(1)}$
 gauge group of the SM.
-This Lepton Flavour Universality (LFU) can be viewed 
-as a key prediction of the SM. 
+This Lepton Flavor Universality (LFU) can be viewed
+as a key prediction of the SM.
 
-Deviations from LFU would be a clear sign of New Physics (NP) effects.
+Recent measurements of the LHCb experiment hint at deviations from LFU, which would be a clear sign of NP effects.
+There are theoretical models to explain LFU in beyond standard model processes, such as lepto-quarks (LQ) which
+directly couple leptons to quarks.
 
-There are theoretical models to explain LFU in beyond standard model processes, such as lepto-quarks.
+\subsection{$B^+\to K^+l^{+} l^{-}$ decays}
+In the SM some decay rates can be predicted with high accuracy
+The $B^+\to K^+l^{+} l^{-}$ and similar decays happen with $b\to s l^+l^-$
+quark transitions. They contain a hadron in the final state and
+are forbidden at tree level.
+The lowest order diagram contributing in the SM is a
+penguin diagram as seen in \autoref{fig:SMbkll}.
+For that reason the branching fraction of that process
+is suppressed on the order of
+$\mathcal{O}(10^{-6})$ \cite{Zyla:2020zbs}.
+This is good to observe NP effects,
+since there are NP models, where this decay can happen
+on tree-level.
+An example of such a NP process is the
+lepto-quark mediated diagram in \autoref{fig:BSMbkll}.
 
-\begin{tikzpicture}
- \begin{feynman}
-    \vertex (b1) {$\overline b$};
-    \vertex [right=of b1] (b2);
-    \vertex [right=of b2] (b3);
-    \vertex [right=of b3] (b4) {$\overline s$};
+Similar processes with $b\to sl^+ l^-$ transitions,
+allow similar analysis.
+They provide different observables than
+similar measurements without a meson in the final state.
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{feynman}
+			\vertex (b1) {$\overline b$};
+			\vertex [right=of b1] (b2);
+			\vertex [right=of b2] (b3);
+			\vertex [right=of b3] (b4) {$\overline s$};
 
-    \vertex [above=.8 of b1] (u1) {$u$};
-    \vertex [above=.8 of b4] (u2) {$u$};
+			\vertex [above=.8 of b1] (u1) {$u$};
+			\vertex [above=.8 of b4] (u2) {$u$};
 
-    \vertex at ($(b2)!0.5!(b3)!1!-90:(b3)$) (g1);
-    \vertex [below=1.5 of b3] (g2);
-    \vertex [below=1.2 of b4] (l1) {\(\ell^{+}\)};
-    \vertex [below=.6 of l1] (l2) {\(\ell^{-}\)};
+			\vertex at ($(b2)!0.5!(b3)!1!-90:(b3)$) (g1);
+			\vertex [below=1.5 of b3] (g2);
+			\vertex [below=1.2 of b4] (l1) {\(\ell^{+}\)};
+			\vertex [below=.6 of l1] (l2) {\(\ell^{-}\)};
 
-    \diagram* {
-      (u1) -- [fermion] (u2),
-      (b1) -- [anti fermion] (b2) -- [boson, edge label={$W^+$}] (b3) -- [anti fermion] (b4),
-      (b2) -- [anti fermion, bend right] (g1) -- [anti fermion, bend right] (b3),
-      (g1) -- [photon, bend right, edge label'={$\gamma/Z^0$}] (g2),
-      (l1) -- [fermion, bend right] (g2) -- [fermion, bend right] (l2),
-    };
+			\diagram* {
+			(u1) -- [fermion] (u2),
+			(b1) -- [anti fermion] (b2) -- [boson, edge label={$W^+$}] (b3) -- [anti fermion] (b4),
+			(b2) -- [anti fermion, bend right] (g1) -- [anti fermion, bend right] (b3),
+			(g1) -- [photon, bend right, edge label'={$\gamma/Z^0$}] (g2),
+			(l1) -- [fermion, bend right] (g2) -- [fermion, bend right] (l2),
+			};
 
-  \end{feynman}
-  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
-  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
-  \node [above=0.15 of g1]  {$\overline u, \overline c, \overline t$};
-\end{tikzpicture}
+		\end{feynman}
+		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
+		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
+		\node [above=0.15 of g1]  {$\overline u, \overline c, \overline t$};
+	\end{tikzpicture}
+	\caption{\label{fig:SMbkll} SM lowest order diagram of the $B^+\to~K^+l^{+}~l^{-}$ decay.}%
+\end{figure}
 
-\begin{tikzpicture}
- \begin{feynman}
-    \vertex (b1) {$\overline b$};
-    \vertex [right=of b1] (b2);
-    \vertex [right=of b2] (b3);
-    \vertex [right=of b3] (b4) {$\overline s$};
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{feynman}
+			\vertex (b1) {$\overline b$};
+			\vertex [right=of b1] (b2);
+			\vertex [right=of b2] (b3);
+			\vertex [right=of b3] (b4) {$\overline s$};
 
-    \vertex [above=.8 of b1] (u1) {$u$};
-    \vertex [above=.8 of b4] (u2) {$u$};
+			\vertex [above=.8 of b1] (u1) {$u$};
+			\vertex [above=.8 of b4] (u2) {$u$};
 
-    \vertex [below=1.2 of b4] (l1) {\(\ell^{+}\)};
-    \vertex [below=.7 of l1] (l2) {\(\ell^{-}\)};
+			\vertex [below=1.2 of b4] (l1) {\(\ell^{+}\)};
+			\vertex [below=.7 of l1] (l2) {\(\ell^{-}\)};
 
-    \diagram* {
-      (u1) -- [fermion] (u2),
-      (b1) -- [anti fermion] (b2) -- [scalar, edge label={$LQ$}] (b3) -- [anti fermion] (b4),
-      (l1) -- [fermion, bend left] (b3),
-      (l2) -- [fermion, bend left] (b2),
-    };
+			\diagram* {
+			(u1) -- [fermion] (u2),
+			(b1) -- [anti fermion] (b2) -- [scalar, edge label={$LQ$}] (b3) -- [anti fermion] (b4),
+			(l1) -- [fermion, bend left] (b3),
+			(l2) -- [fermion, bend left] (b2),
+			};
 
-  \end{feynman}
-  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
-  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
-\end{tikzpicture}
+		\end{feynman}
+		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
+		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
+	\end{tikzpicture}
+	\caption{\label{fig:BSMbkll} NP example of the $B^+\to~K^+l^{+}~l^{-}$ decay with lepto-quark interaction.}%
+\end{figure}
+
+
+
+
+
+\section{Lepton Flavor Universality Tests}
+In the last decade multiple tensions with SM predictions were observed in $b\to s l^+l^-$ transitions.
+The deviation in observables from SM predictions, are called \enquote{flavor anomalies}.
+These deviations recently reached the $\num{3}\sigma$ level, based on proton-proton collision data
+at the LHCb detector.
+Since the calculations in quantum chromo dynamics (QCD) rely on lattice-qcd predictions, because
+of the non-pertubative nature of QCD,
+the resulting uncertainties in QCD effects are high.
+Since changing leptons does not affect QCD calculations because of LFU,
+it is possible to define observables, which are independent from QCD uncertanties,
+since they cancel. One class of theoretically clean observables is \cite{Hiller2004}
+\begin{equation}
+	R_{H}:= \frac{\int^{q_{\mathrm{max}}^2}_{q_{\mathrm{max}}^2}\frac{\dif \mathcal{B}(B\to H\mu^+\mu^-)}{\dif q^2} \dif q^2}{
+		\int^{q_{\mathrm{max}}^2}_{q_{\mathrm{max}}^2}\frac{\dif \mathcal{B}(B\to He^+e^-)}{\dif q^2} \dif q^2
+	} \overset{\mathrm{SM}}{\approx} 1.
+\end{equation}
+$\mathcal{B}$ is the branching ratio of the given process, where $H$ can be a hadron ($H=K$ in our case)
+or even a collection of particles. The differential branching fractions are 
+integrated over the invariant mass squared of the two leptons 
+in the \emph{same} region $q^2~\in~(q_{\mathrm{min}}^2,~q_{\mathrm{max}}^2)$.
+These observables are free from QCD uncertanties.
+For example in the SM 
+	$R_{K}=\num{1.00030}_{-\num{0.00007}}^{+\num{0.00010}}$
+for $q^2\in(1, 6)\si{\giga\electronvolt}$
+ has a relative uncertainty in the order of
+$\mathcal{O}(10^{-4})$\cite{Hiller}. 

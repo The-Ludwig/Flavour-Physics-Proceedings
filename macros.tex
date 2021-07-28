@@ -60,13 +60,6 @@
 }
 \xDeclarePairedDelimeter{\set}{\lbrace}{\rbrace}
 
-\let\mysubsection=\subsection
-\RenewDocumentCommand\subsection{m}
-{
-    \FloatBarrier
-    \mysubsection{#1}
-}
-
 \NewDocumentCommand{\anti} {m}
 {
     \overline{#1}
