@@ -1,7 +1,66 @@
-\section{Test}
-This is just a first test of the PRL template. 
-For some reason I get right-bounded text. To investigate this, I am writing nonsense. 
-One could ask: Why is he not using a lorem text? Well, in LaTeX I could even use a small command for that. 
-But sometimes its just easier doing some ugly shit, than thinking too much about how to do it right!
+\section{Lepton Flavour Universality}
+In the Standard Model (SM) the three leptons 
+$e, \mu, \tau$ only differ in their mass. 
+In all other properties they are interchangeable,
+because they transform the same under the $\symup{SU(3)\times SU(2)\times U(1)}$
+gauge group of the SM.
+This Lepton Flavour Universality (LFU) can be viewed 
+as a key prediction of the SM. 
 
-\Blindtext[10]
+Deviations from LFU would be a clear sign of New Physics (NP) effects.
+
+There are theoretical models to explain LFU in beyond standard model processes, such as lepto-quarks.
+
+\begin{tikzpicture}
+ \begin{feynman}
+    \vertex (b1) {$\overline b$};
+    \vertex [right=of b1] (b2);
+    \vertex [right=of b2] (b3);
+    \vertex [right=of b3] (b4) {$\overline s$};
+
+    \vertex [above=.8 of b1] (u1) {$u$};
+    \vertex [above=.8 of b4] (u2) {$u$};
+
+    \vertex at ($(b2)!0.5!(b3)!1!-90:(b3)$) (g1);
+    \vertex [below=1.5 of b3] (g2);
+    \vertex [below=1.2 of b4] (l1) {\(\ell^{+}\)};
+    \vertex [below=.6 of l1] (l2) {\(\ell^{-}\)};
+
+    \diagram* {
+      (u1) -- [fermion] (u2),
+      (b1) -- [anti fermion] (b2) -- [boson, edge label={$W^+$}] (b3) -- [anti fermion] (b4),
+      (b2) -- [anti fermion, bend right] (g1) -- [anti fermion, bend right] (b3),
+      (g1) -- [photon, bend right, edge label'={$\gamma/Z^0$}] (g2),
+      (l1) -- [fermion, bend right] (g2) -- [fermion, bend right] (l2),
+    };
+
+  \end{feynman}
+  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
+  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
+  \node [above=0.15 of g1]  {$\overline u, \overline c, \overline t$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \begin{feynman}
+    \vertex (b1) {$\overline b$};
+    \vertex [right=of b1] (b2);
+    \vertex [right=of b2] (b3);
+    \vertex [right=of b3] (b4) {$\overline s$};
+
+    \vertex [above=.8 of b1] (u1) {$u$};
+    \vertex [above=.8 of b4] (u2) {$u$};
+
+    \vertex [below=1.2 of b4] (l1) {\(\ell^{+}\)};
+    \vertex [below=.7 of l1] (l2) {\(\ell^{-}\)};
+
+    \diagram* {
+      (u1) -- [fermion] (u2),
+      (b1) -- [anti fermion] (b2) -- [scalar, edge label={$LQ$}] (b3) -- [anti fermion] (b4),
+      (l1) -- [fermion, bend left] (b3),
+      (l2) -- [fermion, bend left] (b2),
+    };
+
+  \end{feynman}
+  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
+  \draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
+\end{tikzpicture}
