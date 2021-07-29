@@ -148,21 +148,18 @@ At LHCb $q^2$ is always chosen to be smaller than
 from the $J/\Psi$ resonance.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{media/RK.png}
+	\includegraphics[width=0.6\linewidth]{media/RK.png}
 	\caption{Measurements of $R_K$ \cite{petridis2021test}. The LHCb measurement with Run 1 and 2015/16 data corresponds to \SI{5}{\femto\barn\tothe{-1}}.
 		It hints at SM tension at the $2\sigma$ level.}%
 	\label{fig:RKearlier}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{media/RKstar.png}
+	\includegraphics[width=0.6\linewidth]{media/RKstar.png}
 	\caption{Measurements of $R_{K^{*0}}$ \cite{petridis2021test}. The LHCb measurement corresponds to  \SI{3}{\femto\barn\tothe{-1}}.
 		It hints at SM tension around the $2\sigma$ level.}%
 	\label{fig:RKstarearlier}
 \end{figure}
-
-\subsection{Global fits}
-Maybe later, did not really understand that.
 
 \section{$\bfiftextbf{R_K}$ with the full LHC\lowercase{b} dataset}
 This year the remaining Run 2 LHCb data recorded in 2017 and 2018
@@ -312,3 +309,50 @@ The value
 \end{align}
 is consistent with unity in the $1\sigma$ interval. This can additionally be interpreted 
 as the best LFU test in $\psi(2S)\to \ell^+\ell^-$.
+
+
+\subsection{Systematic uncertainties}
+The dominant systematic uncertainties ($\approx \SI{1}{\percent}$) 
+are due to the choice of the fit model 
+and the statistics of the calibration samples used to understand the backgrounds.
+There are smaller systematic sources of uncertainty ($\approx {1}$~\textperthousand)
+like the dependency of the definition, the precision of $q^2$ and $m(K^+e^+e^-)$ smearing 
+factors.
+The total relative systematic uncertainty in the final $R_K$ measurement will be \SI{1.5}{\percent}
+and is expected to be dominated by the statistic uncertainties.
+
+\subsection{Measuring $\bfiftextbf{R_K}$}
+$R_K$ is now determined as a fit parameter connecting both distributions of 
+\autoref{fig:masses}. 
+The fit is performed as an extended unbinned maximum likelihood fit.
+Extended means that the yields are a fit parameter. 
+With this the $R_K$ is measured to be 
+\begin{equation}
+	R_K = \num{0.846}_{-0.39}^{+0.042}(\text{stat})_{-0.012}^{+0.013}(\text{syst}).
+\end{equation}
+This gives a $p$-value under SM hypothesis of \num{0.0010}, 
+which corresponds to evidence of LFU violation at $3.1\sigma$.
+Using previous measurements of $\mathcal{B}(B^+\to K^+\mu^+\mu^-)$
+it is possible to calculate $\mathcal{B}(B^+\to K^+e^+e^-)$: 
+\begin{equation}
+	\frac{\dif \mathcal{B}(B^+\to K^+e^+e^-)}{\dif q^2} = (28.6_{-1.4}^{+1.5}(\text{stat})\pm 1.4(\text{syst}))\cdot 10^{-9} \si{c\tothe{4}\per \giga\electronvolt\tothe{2}}.
+\end{equation}
+This value implies that electrons seem to behave more SM-like than muons as can be seen in \autoref{fig:lhcbfinal}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{media/lhcbfinal.png}
+	\caption{Differential branching fraction comparing measured results with SM predictions \cite{petridis2021test}.}%
+	\label{fig:lhcbfinal}
+\end{figure}
+
+
+
+\section{Conclusion}
+The updated measurement of $R_K$ with the full LHCb dataset 
+suggest violation from lepton flavor universality at $3.1\sigma$.
+This forms a consistent picture of lepton flavor anomalies,
+making future investigations of LFU in these decays very important.
+To have a better understanding of this phenomenon more data of 
+LHC Run3 is needed.
+An independent confirmation of this result by other LHC detectors and 
+Belle2 is needed.

@@ -22,6 +22,7 @@
 
 % Set language here
 \usepackage[english]{babel}
+\usepackage[section]{placeins}
 
 \input{header.tex}
 
@@ -37,9 +38,16 @@
              %  but any date may be explicitly specified
 
 \begin{abstract}
-	On March 23 2021 Konstantinos A. Petridis presented on behalf of the LHCb collaboration new results on 
-	Lepton Flavour Universality \cite{petridis2021test}. 
-	This is a conference proceeding of that talk.
+	The Standard Model of particle physics predicts that the only difference between the charged leptons 
+	is their mass, this is called lepton flavor universality (LFU). 
+	The ratio of branching fractions $R_K=\mathcal{B}(B\to~K^+\mu^+\mu^-)/\mathcal{B}(B\to~K^+\mu^+\mu^-)$
+	is expected to be one if LFU holds true. 
+	It is measured with the full \SI{9}{\femto\barn\tothe{-1}} LHCb dataset in proton-proton collision data 
+	at CERN's Large Hadron Collider. The result is $R_K=\num{0.846}_{-0.39}^{+0.042}(\text{stat})_{-0.012}^{+0.013}(\text{syst})$,
+	providing a tension with the Standard Model at $3.1\sigma$.
+	%On March 23 2021 Konstantinos A. Petridis presented on behalf of the LHCb collaboration new results on 
+	%Lepton Flavour Universality \cite{petridis2021test}. 
+	%This is a conference proceeding of that talk.
 \end{abstract}
 
 \maketitle
@@ -48,7 +56,6 @@
 
 \input{content/proceedings.tex}
 
-\nocite{*}
 \bibliography{references}% Produces the bibliography via BibTeX.
 
 \end{document}
