@@ -12,9 +12,9 @@
   shape: \f@shape{},
   size: \f@size{}
 }
-\NewDocumentCommand \symbfiftextbf {m}
+\NewDocumentCommand \bfiftextbf {m}
 {
-    \ifthenelse{\equal{\f@series}{bx}\or\equal{\f@series}{b}}{\symbf{#1}}{#1}
+    \ifthenelse{\equal{\f@series}{bx}\or\equal{\f@series}{b}}{\mathbf{#1}}{#1}
 }
 
 \makeatother
