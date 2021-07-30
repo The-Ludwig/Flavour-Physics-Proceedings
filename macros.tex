@@ -14,7 +14,7 @@
 }
 \NewDocumentCommand \bfiftextbf {m}
 {
-    \ifthenelse{\equal{\f@series}{bx}\or\equal{\f@series}{b}}{\mathbf{#1}}{#1}
+    \ifthenelse{\equal{\f@series}{bx}\or\equal{\f@series}{b}}{\symbf{#1}}{#1}
 }
 
 \makeatother
@@ -33,7 +33,7 @@
 }
 \NewDocumentCommand \dif {}
 {
-    \mathinner{\symup{d}\! }
+    \mathinner{\symup{d}\mathchoice{\!}{\!}{}{}}
 }
 
 \ExplSyntaxOff
@@ -49,6 +49,11 @@
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
 \DeclarePairedDelimiter\ket{\lvert}{\rangle}
 \DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
+
+\NewDocumentCommand{\bkll}{}
+{
+	\texorpdfstring{\TextOrMath{$\bfiftextbf{B^+\to K^+\ell^+\ell^-}$}{\bfiftextbf{B^+\to K^+\ell^+\ell^-}}}{𝐵⁺→𝐾⁺ℓ⁺ℓ⁻}
+}
 
 \NewDocumentCommand\xDeclarePairedDelimeter{mmm}
 {%

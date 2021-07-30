@@ -19,11 +19,11 @@ Recent measurements of the LHCb experiment hint at deviations from LFU, which wo
 There are theoretical models to explain LFU in beyond standard model processes, such as lepto-quarks (LQ) which
 directly couple leptons to quarks.
 
-\subsection{$B^+\to K^+l^{+} l^{-}$ decays}
+\subsection{\bkll decays}
 In the SM some decay rates can be predicted with high accuracy
-The $B^+\to K^+l^{+} l^{-}$ and similar decays happen with $b\to s l^+l^-$
+The \bkll and similar decays happen with $b\to s \ell^+\ell^-$
 quark transitions. They contain a hadron in the final state and
-are forbidden at tree level.
+are forbidden at tree level in the SM.
 The lowest order diagram contributing in the SM is a
 penguin diagram as seen in \autoref{fig:SMbkll}.
 For that reason the branching fraction of that process
@@ -35,10 +35,8 @@ on tree-level.
 An example of such a NP process is the
 lepto-quark mediated diagram in \autoref{fig:BSMbkll}.
 
-Similar processes with $b\to sl^+ l^-$ transitions,
+Similar processes with $b\to s\ell^+ \ell^-$ transitions,
 allow similar analysis.
-They provide different observables than
-similar measurements without a meson in the final state.
 \begin{figure}
 	\centering
 	\begin{tikzpicture}
@@ -69,7 +67,7 @@ similar measurements without a meson in the final state.
 		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
 		\node [above=0.15 of g1]  {$\overline u, \overline c, \overline t$};
 	\end{tikzpicture}
-	\caption{\label{fig:SMbkll} SM lowest order diagram of the $B^+\to~K^+l^{+}~l^{-}$ decay.}%
+	\caption{\label{fig:SMbkll} SM lowest order diagram of the \bkll decay.}%
 \end{figure}
 
 \begin{figure}
@@ -98,7 +96,7 @@ similar measurements without a meson in the final state.
 		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](b1.south west) --node[left] {$B^+ \ $} (u1.north west);
 		\draw[decorate, decoration={brace, amplitude=5pt},line width=1pt](u2.north east) --node[right] {$\ K^+ \ $} (b4.south east);
 	\end{tikzpicture}
-	\caption{\label{fig:BSMbkll} NP example of the $B^+\to~K^+l^{+}~l^{-}$ decay with lepto-quark interaction.}%
+	\caption{\label{fig:BSMbkll} NP example of the \bkll decay with lepto-quark interaction.}%
 \end{figure}
 
 
@@ -106,19 +104,19 @@ similar measurements without a meson in the final state.
 
 
 \section{Lepton Flavor Universality Tests}
-In the last decade multiple tensions with SM predictions were observed in $b\to s l^+l^-$ transitions.
-The deviation in observables from SM predictions, are called \enquote{flavor anomalies}.
+In the last decade multiple tensions with SM predictions were observed in $b\to s \ell^+\ell^-$ transitions.
+These deviation in observables from SM predictions, are called \enquote{flavor anomalies}.
 These deviations recently reached the $\num{3}\sigma$ level, based on proton-proton collision data
 at the LHCb detector.
-Since the calculations in quantum chromo dynamics (QCD) rely on lattice-qcd predictions, because
+Since the calculations in quantum chromo dynamics (QCD) rely on lattice-QCD predictions, because
 of the non-pertubative nature of QCD,
 the resulting uncertainties in QCD effects are high.
 Since changing leptons does not affect QCD calculations because of LFU,
-it is possible to define observables, which are independent from QCD uncertanties,
-since they cancel. One class of theoretically clean observables is \cite{Hiller2004}
+it is possible to define observables, which are independent from QCD uncertainties,
+since the uncertain values cancel out. One class of these theoretically clean observables is\cite{Hiller2004}
 \begin{equation}
-	R_{H}:= \frac{\int^{q_{\mathrm{max}}^2}_{q_{\mathrm{max}}^2}\frac{\dif \mathcal{B}(B\to H\mu^+\mu^-)}{\dif q^2} \dif q^2}{
-		\int^{q_{\mathrm{max}}^2}_{q_{\mathrm{max}}^2}\frac{\dif \mathcal{B}(B\to He^+e^-)}{\dif q^2} \dif q^2
+	R_{H}:= \frac{\int^{q_{\mathrm{max}}^2}_{q_{\mathrm{max}}^2}\frac{\dif \mathcal{B}\l(B\to H\mu^+\mu^-\r)}{\dif q^2} \dif q^2}{
+		 \int^{q_{\mathrm{max}}^2}_{q_{\mathrm{max}}^2}\frac{\dif \mathcal{B}\l(B\to He^+e^-\r)}{\dif q^2} \dif q^2
 	} \overset{\mathrm{SM}}{\approx} 1.
 \end{equation}
 $\mathcal{B}$ is the branching ratio of the given process, where $H$ can be a hadron ($H=K$ in our case)
@@ -133,10 +131,10 @@ has a relative uncertainty in the order of
 $\mathcal{O}(10^{-4})$\cite{Hiller}.
 Adding QED corrections (which are relevant only because
 of the different electron and muon mass)
-The full uncertainty of $R_K$ is in the order
+the full uncertainty of $R_K$ is in the order
 of $\mathcal{O}(\SI{1}{\percent})$ \cite{Bordone2016}.
 This means that a big deviation from unity in this value
-is a big indication for NP.
+is a strong indication for NP.
 Until this year only a part of Run 2
 LHCb data was analised corresponding (together with Run 1 data) to
 \SI{5}{\femto\barn\tothe{-1}} of data.
@@ -164,11 +162,12 @@ from the $J/\Psi$ resonance.
 \section{$\bfiftextbf{R_K}$ with the full LHC\lowercase{b} dataset}
 This year the remaining Run 2 LHCb data recorded in 2017 and 2018
 was added to the earlier \SI{5}{\femto\barn\tothe{-1}}.
-This adds \SI{4}{\femto\barn\tothe{-1}} to the dataset
+This adds \SI{4}{\femto\barn\tothe{-1}} to the dataset,
 roughly doubling the amount of observed decays.
 
+
 The same analysis strategy as in the smaller dataset is used and the
-results are double checked.
+analysis is double checked with well known observables.
 
 It was already established in the earlier section that $R_K$ provides
 a theoretically clean prediction.
@@ -209,16 +208,16 @@ Controlling the experimental differences is key to the analysis strategy.
 \subsection{The double ratio strategy}
 To suppress the systematic effects coming from electron/muon differences 
 the branching ratios can be measured relative to a well understood control channel. 
-The channel of choice is the $B^+\to K^+j/\psi(\ell^+\ell^-)$ due to its high similarity 
+The channel of choice is the $B^+\to K^+J/\psi(\ell^+\ell^-)$ due to its high similarity 
 with the channel of interest. They share identical selections except the cut on $q^2$.
 Furthermore the $J/\psi$ mode is known to obey LFU within $\mathcal{O}(10^{-4})$ \cite{Moise:2021nje}.
-The experimental observable can than be defined as
+The experimental observable can be defined as
 \begin{align}
 	\label{eqn:rkexp}
-	R_K & = \l .\frac{\mathcal{B}(B\to K^+\mu^+\mu^-)}{\mathcal{B}(B\to K^+J/\psi(\mu^+\mu^-))} \r/
-	\frac{\mathcal{B}(B\to K^+e^+e^-)}{\mathcal{B}(B\to K^+J/\psi(e^+e^-))} \nonumber               \\
-	    & = \l . \frac{N_{\mu}}{\epsilon_\mu}\frac{\epsilon_{J/\psi(\mu)}}{N_{J/\psi(\mu)}} \r/
-	\frac{N_{e}}{\epsilon_e}\frac{\epsilon_{J/\psi(e)}}{N_{J/\psi(e)}}.
+	R_K & = \l .\frac{\mathcal{B}\l(B\to K^+\mu^+\mu^-\r)}{\mathcal{B}\l(B\to K^+J/\psi\l(\mu^+\mu^-\r)\r)} \r/
+	\frac{\mathcal{B}\l(B\to K^+e^+e^-\r)}{\mathcal{B}\l(B\to K^+J/\psi\l(e^+e^-\r)\r)} \nonumber               \\
+	    & = \l . \frac{N_{\mu}}{\epsilon_\mu}\frac{\epsilon_{J/\psi\l(\mu\r)}}{N_{J/\psi\l(\mu\r)}} \r/
+	\frac{N_{e}}{\epsilon_e}\frac{\epsilon_{J/\psi\l(e\r)}}{N_{J/\psi\l(e\r)}}.
 \end{align}
 Where $\epsilon$ are the efficiencies of the indicated decays and $N$ their yields.
 To clearify the expression the integrals in the first line were omitted.
@@ -235,7 +234,7 @@ To remove unwanted backgrounds in the dataset
 further selections have to be applied.
 Removing backgrounds decays with the same (detectable) 
 final state can be done by applying mass vetoes. 
-For example the decay $B^+\to~\anti D^0(\to~K^+e^-\nu)e^+\anti \nu$
+For example the decay $B^+\to~\anti {D^0}(\to~K^+e^-\nu)e^+\anti \nu$
 has the same final state, since the neutrinos are undetectable.
 To remove this the invariant mass is constrained to 
 furfill the condition $m(K^+ e^-) > m(D^0)$.
@@ -263,7 +262,6 @@ was not reconstructed.
 The simulation is calibrated through control data 
 for trigger efficiency, PID efficiency, $B^+$ kinematics and 
 the resolutions of $q^2$ and $m(K^+e^+e^-)$.
-
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{media/backgrounds.png}
@@ -276,7 +274,7 @@ To verify the experimental procedure
 multiple cross-checks on other variables are performed. 
 The efficiencies are tested with 
 \begin{equation}
-	r_{J/\psi} = \frac{\mathcal{B}(B^+\to K^+J/\psi(\mu^+\mu^-))}{\mathcal{B}(B^+\to K^+J/\psi(e^+e^-))} = 1
+	r_{J/\psi} = \frac{\mathcal{B}\l(B^+\to K^+J/\psi\l(\mu^+\mu^-\r)\r)}{\mathcal{B}\l(B^+\to K^+J/\psi\l(e^+e^-\r)\r)} = 1
 \end{equation}
 which is a factor in \autoref{eqn:rkexp} and the equality to unity is known within \SI{0.4}{\percent}.
 This is not at all trivial, but in fact a very strict test of the procedure, since it requires 
@@ -294,28 +292,27 @@ flat, we are confident that the efficiencies are understood.
 	\centering
 	\includegraphics[width=\linewidth]{media/kinematic.png}
 	\caption{Cross check of $r_{J/\psi} = 1$ throughout the phase space \cite{petridis2021test}. 
-	On the right hand side you can see the binning in the space of the maximal lepton momentum vs the opening angle between the leptons.
-	On the left hand side you can see the flat distribution of $r_{J/\psi}$.}%
+	On the right hand side the binning in the space of the maximal lepton momentum vs the opening angle between the leptons is shown.
+	On the left hand side the flat distribution of $r_{J/\psi}$ is visible.}%
 	\label{fig:kinematic}
 \end{figure}
 
 To validate the double-ratio procedure, it is performed on the $B^+\to K^+\psi(2S)(\mu^+\mu^-)$ decay.
 The value 
 \begin{align}
-	R_{\psi(2S)}
-	&= \l .\frac{\mathcal{B}(K^+\psi(2S)(\mu^+\mu^-))}{\mathcal{B}(K^+J/\psi(\mu^+\mu^-))} \r/
-	\frac{\mathcal{B}(K^+\psi(2S)(e^+e^-))}{\mathcal{B}(K^+J/\psi(e^+e^-))} \nonumber
+	R_{\psi\l(2S\r)}
+	&= \l .\frac{\mathcal{B}\l(K^+\psi\l(2S\r)\l(\mu^+\mu^-\r)\r)}{\mathcal{B}\l(K^+J/\psi\l(\mu^+\mu^-\r)\r)} \r/
+	\frac{\mathcal{B}\l(K^+\psi\l(2S\r)\l(e^+e^-\r)\r)}{\mathcal{B}\l(K^+J/\psi\l(e^+e^-\r)\r)} \nonumber
 	\\ &= \num{0.997+-0.011}
 \end{align}
 is consistent with unity in the $1\sigma$ interval. This can additionally be interpreted 
 as the best LFU test in $\psi(2S)\to \ell^+\ell^-$.
 
-
 \subsection{Systematic uncertainties}
 The dominant systematic uncertainties ($\approx \SI{1}{\percent}$) 
 are due to the choice of the fit model 
 and the statistics of the calibration samples used to understand the backgrounds.
-There are smaller systematic sources of uncertainty ($\approx {1}$~\textperthousand)
+There are smaller systematic sources of uncertainty ($\approx~{1}$~\textperthousand)
 like the dependency of the definition, the precision of $q^2$ and $m(K^+e^+e^-)$ smearing 
 factors.
 The total relative systematic uncertainty in the final $R_K$ measurement will be \SI{1.5}{\percent}
@@ -325,8 +322,8 @@ and is expected to be dominated by the statistic uncertainties.
 $R_K$ is now determined as a fit parameter connecting both distributions of 
 \autoref{fig:masses}. 
 The fit is performed as an extended unbinned maximum likelihood fit.
-Extended means that the yields are a fit parameter. 
-With this the $R_K$ is measured to be 
+%Extended means that the yields are a fit parameter. 
+With this $R_K$ is measured to be 
 \begin{equation}
 	R_K = \num{0.846}_{-0.39}^{+0.042}(\text{stat})_{-0.012}^{+0.013}(\text{syst}).
 \end{equation}
@@ -335,7 +332,7 @@ which corresponds to evidence of LFU violation at $3.1\sigma$.
 Using previous measurements of $\mathcal{B}(B^+\to K^+\mu^+\mu^-)$
 it is possible to calculate $\mathcal{B}(B^+\to K^+e^+e^-)$: 
 \begin{equation}
-	\frac{\dif \mathcal{B}(B^+\to K^+e^+e^-)}{\dif q^2} = (28.6_{-1.4}^{+1.5}(\text{stat})\pm 1.4(\text{syst}))\cdot 10^{-9} \si{c\tothe{4}\per \giga\electronvolt\tothe{2}}.
+	\frac{\dif \mathcal{B}}{\dif q^2} = \l(28.6_{-1.4}^{+1.5}\l(\text{stat}\r)\pm 1.4\l(\text{syst}\r)\r)\cdot 10^{-9} \si{c\tothe{4}\per \giga\electronvolt\tothe{2}}.
 \end{equation}
 This value implies that electrons seem to behave more SM-like than muons as can be seen in \autoref{fig:lhcbfinal}.
 \begin{figure}
@@ -349,7 +346,7 @@ This value implies that electrons seem to behave more SM-like than muons as can 
 
 \section{Conclusion}
 The updated measurement of $R_K$ with the full LHCb dataset 
-suggest violation from lepton flavor universality at $3.1\sigma$.
+suggest violation of lepton flavor universality at $3.1\sigma$.
 This forms a consistent picture of lepton flavor anomalies,
 making future investigations of LFU in these decays very important.
 To have a better understanding of this phenomenon more data of 
