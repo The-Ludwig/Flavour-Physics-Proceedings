@@ -145,14 +145,16 @@ The $q^2$ value is always chosen to be smaller than
 from the $J/\psi$ resonance.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{media/RK.png}
+	\includegraphics[width=0.8\linewidth]{media/RK.png}
 	\caption{Measurements of $R_K$ \cite{petridis2021test}. The LHCb measurement with Run 1 and 2015/16 data corresponds to \SI{5}{\femto\barn\tothe{-1}}.
-		It hints at SM tension at the $2\sigma$ level.}%
+		It hints at SM tension at the $2\sigma$ level.
+\vspace{-1em}
+		}%
 	\label{fig:RKearlier}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{media/RKstar.png}
+	\includegraphics[width=0.8\linewidth]{media/RKstar.png}
 	\caption{Measurements of $R_{K^{*0}}$ \cite{petridis2021test}. The LHCb measurement corresponds to  \SI{3}{\femto\barn\tothe{-1}}.
 		It hints at SM tension around the $2\sigma$ level.}%
 	\label{fig:RKstarearlier}
@@ -186,14 +188,13 @@ the clusters directed towards the electron direction before the magnet ($E_{T}>\
 Even after this recovery the electron mass distribution is still not as sharp as the muon one, which can
 be seen in \autoref{fig:masses}.
 More differences stem from differences in the trigger, particle identification and tracking efficiency.
-Controlling the experimental differences is key to the analysis strategy.
+Controlling the experimental differences is key to the analysis strategy.\vspace{-2em}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{media/electronbrems.png}
+	\includegraphics[width=0.6\linewidth]{media/electronbrems.png}
 	\caption{Reconstruction of the electron energy at LHCb with bremsstrahlung \cite{petridis2021test}.}%
 	\label{fig:bremsstrahlung}
 \end{figure}
-
 \begin{figure}[h]
 	\centering
 	\hspace{0.5em}\includegraphics[width=0.83\linewidth]{media/Mmumu.png}
@@ -209,13 +210,13 @@ The channels of choice are $B^+\to K^+J/\psi(\to\ell^+\ell^-)$ due to their high
 with the channel of interest. They share identical selections except the cut on $q^2$.
 Furthermore the $J/\psi$ mode is known to obey LFU within a precision of  $\mathcal{O}(10^{-4})$ \cite{Moise:2021nje}.
 The experimental observable can be defined as
-\begin{align*}
+\begin{align}
 	\label{eqn:rkexp}
 	R_K & = \l .\frac{\mathcal{B}\l(B\to K^+\mu^+\mu^-\r)}{\mathcal{B}\l(B\to K^+J/\psi\l(\mu^+\mu^-\r)\r)} \r/
 	\frac{\mathcal{B}\l(B\to K^+e^+e^-\r)}{\mathcal{B}\l(B\to K^+J/\psi\l(e^+e^-\r)\r)} \nonumber               \\
 	    & = \l . \frac{N_{\mu}}{\epsilon_\mu}\frac{\epsilon_{J/\psi\l(\to\mu\r)}}{N_{J/\psi\l(\to\mu\r)}} \r/
 	\frac{N_{e}}{\epsilon_e}\frac{\epsilon_{J/\psi\l(\to e\r)}}{N_{J/\psi\l(\to e\r)}}.
-\end{align*}
+\end{align}
 Where $\epsilon$ are the efficiencies of the indicated decays and $N$ their yields.
 
 The invariant mass distribution of the final state particles is fitted to get the yields
@@ -289,7 +290,8 @@ flat, we are confident that the efficiencies are understood.
 	\centering
 	\includegraphics[width=\linewidth]{media/kinematic.png}
 	\caption{Cross check of $r_{J/\psi} = 1$ throughout the phase space \cite{lhcbcollaboration2021test}. 
-	On the right the binning in the space of the maximal lepton momentum vs the opening angle between the leptons is shown.
+	On the right the binning in the space of the maximal lepton momentum vs the opening angle between the leptons is shown. 
+	The bins are chosen to contain approximately the same number of simulated $B^+ \to K^+ J/\psi(e^+ e^-)$ events.
 	On the left the flat distribution of $r_{J/\psi}$ is visible.}%
 	\label{fig:kinematic}
 \end{figure}
@@ -304,6 +306,7 @@ The value
 \end{align*}
 is consistent with unity in the $1\sigma$ interval. This can additionally be interpreted 
 as a strong LFU test in $\psi(2S)\to \ell^+\ell^-$.
+\vspace{-1em}
 
 \subsection{Systematic uncertainties}
 The dominant systematic uncertainties ($\approx \SI{1}{\percent}$) 
@@ -321,16 +324,16 @@ $R_K$ is determined as a fit parameter connecting both distributions of
 The fit is performed as an extended unbinned maximum likelihood fit.
 %Extended means that the yields are a fit parameter. 
 With this $R_K$ is measured to be 
-\begin{equation}
+\begin{equation*}
 	R_K = \num{0.846}_{-0.039}^{+0.042}(\text{stat})_{-0.012}^{+0.013}(\text{syst}).
-\end{equation}
+\end{equation*}
 This gives a $p$-value under SM hypothesis of \num{0.0010}, 
 which corresponds to evidence of LFU violation at $3.1\sigma$.
 Using previous measurements of $\mathcal{B}(B^+\to K^+\mu^+\mu^-)$
 it is possible to calculate $\mathcal{B}(B^+\to K^+e^+e^-)$: 
-\begin{equation}
+\begin{equation*}
 	\frac{\dif \mathcal{B}}{\dif q^2} = \l(28.6_{-1.4}^{+1.5}\l(\text{stat}\r)\pm 1.4\l(\text{syst}\r)\r)\cdot 10^{-9} \si{c\tothe{4}\per \giga\electronvolt\tothe{2}}.
-\end{equation}
+\end{equation*}
 This value implies that electrons seem to behave more SM-like than muons as can be seen in \autoref{fig:lhcbfinal}.
 \begin{figure}
 	\centering
@@ -338,8 +341,6 @@ This value implies that electrons seem to behave more SM-like than muons as can 
 	\caption{Differential branching fraction $\mathcal{B}(B^+\to K^+\ell^+\ell^-)$ comparing measured results with SM predictions \cite{petridis2021test}.}%
 	\label{fig:lhcbfinal}
 \end{figure}
-
-
 
 \section{Conclusion}
 The updated measurement of $R_K$ with the full LHCb dataset 
